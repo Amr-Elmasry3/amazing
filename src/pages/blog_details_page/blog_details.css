@@ -1,0 +1,59 @@
+.blog-details-page .details-section .date,
+.blog-details-page .details-section .count-comments {
+  padding: 7px 10px;
+}
+
+.blog-details-page .details-section .title {
+  margin: 20px 0 10px;
+}
+
+.blog-details-page .details-section .paragraphs {
+  margin: 20px 0 25px;
+}
+
+.blog-details-page .details-section .paragraphs li {
+  list-style: disc;
+  line-height: 1.4;
+  margin-left: 20px;
+}
+
+.blog-details-page .details-section .paragraphs li:nth-of-type(3) {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.blog-details-page .details-section .paragraphs li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.blog-details-page .details-section .tags li {
+  padding: 5px 12px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.blog-details-page .comments-section {
+  margin: 40px 0 0;
+}
+
+.blog-details-page .comments-section .heading {
+  margin: 0 0 20px;
+}
+
+.blog-details-page .comments-section .content {
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.blog-details-page .comments-section .content .box {
+  padding: 10px;
+}
+
+.blog-details-page .comments-section .content .box .comment {
+  margin-top: 15px;
+  line-height: 1.4;
+}

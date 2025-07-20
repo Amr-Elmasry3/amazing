@@ -1,0 +1,25 @@
+.blog-card .cover {
+  padding: 15px 0;
+}
+
+.blog-card .cover .date {
+  padding-right: 10px;
+}
+
+.blog-card .auther {
+  padding-left: 10px;
+}
+
+.blog-card .cover .title {
+  margin: 15px 0;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.blog-card .cover .description {
+  margin: 0 0 15px;
+  line-height: 1.3;
+}

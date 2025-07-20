@@ -1,0 +1,60 @@
+/* Start Hero Section */
+.home-page .btn {
+  font-size: 11px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.home-page .hero-section .mySwiper .swiper-pagination-bullets span {
+  opacity: 1;
+  background-color: var(--white);
+}
+.home-page
+  .hero-section
+  .mySwiper
+  .swiper-pagination-bullets
+  span.swiper-pagination-bullet-active {
+  background-color: var(--light-navy);
+}
+
+.home-page .hero-section .box {
+  padding: 20px;
+}
+
+.home-page .hero-section .box .sub-title {
+  margin: 7px 0 15px;
+}
+/* End Hero Section */
+
+/* Start Categories Section */
+.home-page .categories-section a .details .category {
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.home-page .categories-section a:hover > .details .category {
+  text-decoration: underline;
+  color: var(--orange);
+}
+
+/* End Categories Section */
+
+/* Start Brands Section */
+
+.home-page .brands-section .rfm-marquee-container,
+.home-page .brands-section .rfm-marquee-container .rfm-marquee:last-of-type,
+.home-page
+  .brands-section
+  .rfm-marquee-container
+  .rfm-marquee:first-of-type
+  .rfm-initial-child-container {
+  gap: 50px;
+}
+
+/* End Brands Section */

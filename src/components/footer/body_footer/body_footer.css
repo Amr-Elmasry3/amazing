@@ -1,0 +1,50 @@
+.body-footer .title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 40%;
+  background-color: var(--orange);
+}
+
+.body-footer .social-links a {
+  transition: var(--transition);
+}
+
+.body-footer .social-links a.facebook:hover {
+  background-color: #2b3f69;
+}
+
+.body-footer .social-links a.twitter:hover {
+  background-color: #196fa5;
+}
+
+.body-footer .social-links a.youtube:hover {
+  background-color: #b40505;
+}
+
+.body-footer .social-links a.linkedin:hover {
+  background-color: #013e5f;
+}
+
+.body-footer .information ul a,
+.body-footer .quick-links ul a,
+.body-footer .categories ul a {
+  width: fit-content;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.body-footer .information ul a:hover,
+.body-footer .quick-links ul a:hover,
+.body-footer .categories ul a:hover {
+  transform: translateX(5px);
+  -webkit-transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  -o-transform: translateX(5px);
+}

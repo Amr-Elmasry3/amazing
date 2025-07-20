@@ -1,0 +1,17 @@
+.product-card .actions,
+.product-card .actions .box,
+.product-card .title {
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.product-card .title {
+  margin: 5px 0;
+}
+
+.product-card:hover > .actions {
+  right: 10px;
+}
