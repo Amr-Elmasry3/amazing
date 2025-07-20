@@ -23,7 +23,7 @@ export default function UpButton() {
 
   return (
     <div
-      className={`up-button fixed w-[30px] h-[30px] rounded-[50%] bg-orange bottom-[20px] ${
+      className={`up-button fixed z-[20] w-[30px] h-[30px] rounded-[50%] bg-orange bottom-[20px] ${
         isVisible ? "right-[20px]" : "right-[-50px]"
       } flex items-center justify-center border-2 border-solid border-light-navy cursor-pointer`}
       style={{ transition: "var(--transition)" }}
