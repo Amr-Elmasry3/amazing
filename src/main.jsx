@@ -6,7 +6,7 @@ import store from "./app/store.js";
 import { Provider } from "react-redux";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/amazing">
+  <BrowserRouter basename="/amazing/">
     <Provider store={store}>
       <App />
     </Provider>
