@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 export const compareSlice = createSlice({
   name: "compare",
   initialState: {
-    products: window.localStorage.getItem("compare")
-      ? JSON.parse(window.localStorage.getItem("compare")).products
+    products: window.localStorage.getItem("amazing_compare")
+      ? JSON.parse(window.localStorage.getItem("amazing_compare")).products
       : [],
   },
   reducers: {
@@ -24,7 +24,7 @@ export const compareSlice = createSlice({
     },
 
     setInStorageCompare: (state) => {
-      window.localStorage.setItem("compare", JSON.stringify(state));
+      window.localStorage.setItem("amazing_compare", JSON.stringify(state));
     },
   },
 });

@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 export const wishlistSlice = createSlice({
   name: "wishlist",
   initialState: {
-    products: window.localStorage.getItem("wishlist")
-      ? JSON.parse(window.localStorage.getItem("wishlist")).products
+    products: window.localStorage.getItem("amazing_wishlist")
+      ? JSON.parse(window.localStorage.getItem("amazing_wishlist")).products
       : [],
   },
   reducers: {
@@ -24,7 +24,7 @@ export const wishlistSlice = createSlice({
     },
 
     setInStorageWishlist: (state) => {
-      window.localStorage.setItem("wishlist", JSON.stringify(state));
+      window.localStorage.setItem("amazing_wishlist", JSON.stringify(state));
     },
   },
 });

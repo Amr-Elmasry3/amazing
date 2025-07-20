@@ -3,14 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 export const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    products: window.localStorage.getItem("cart")
-      ? JSON.parse(window.localStorage.getItem("cart")).products
+    products: window.localStorage.getItem("amazing_cart")
+      ? JSON.parse(window.localStorage.getItem("amazing_cart")).products
       : [],
-    count: window.localStorage.getItem("cart")
-      ? JSON.parse(window.localStorage.getItem("cart")).count
+    count: window.localStorage.getItem("amazing_cart")
+      ? JSON.parse(window.localStorage.getItem("amazing_cart")).count
       : 0,
-    subTotal: window.localStorage.getItem("cart")
-      ? JSON.parse(window.localStorage.getItem("cart")).subTotal
+    subTotal: window.localStorage.getItem("amazing_cart")
+      ? JSON.parse(window.localStorage.getItem("amazing_cart")).subTotal
       : 0,
   },
   reducers: {
@@ -30,7 +30,7 @@ export const cartSlice = createSlice({
     },
 
     setInStorageCart: (state) => {
-      window.localStorage.setItem("cart", JSON.stringify(state));
+      window.localStorage.setItem("amazing_cart", JSON.stringify(state));
     },
 
     setCount: (state, action) => {

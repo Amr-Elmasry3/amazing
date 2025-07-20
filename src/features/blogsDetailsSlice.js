@@ -6,11 +6,11 @@ import { createSlice } from "@reduxjs/toolkit";
 export const blogsDetailsSlice = createSlice({
   name: "blogsDetails",
   initialState: {
-    data: window.localStorage.getItem("blogsDetails")
-      ? JSON.parse(window.localStorage.getItem("blogsDetails")).data
+    data: window.localStorage.getItem("amazing_blogsDetails")
+      ? JSON.parse(window.localStorage.getItem("amazing_blogsDetails")).data
       : blogs,
-    idNow: window.localStorage.getItem("blogsDetails")
-      ? JSON.parse(window.localStorage.getItem("blogsDetails")).idNow
+    idNow: window.localStorage.getItem("amazing_blogsDetails")
+      ? JSON.parse(window.localStorage.getItem("amazing_blogsDetails")).idNow
       : null,
   },
   reducers: {
@@ -53,7 +53,10 @@ export const blogsDetailsSlice = createSlice({
     },
 
     setInStorage: (state) => {
-      window.localStorage.setItem("blogsDetails", JSON.stringify(state));
+      window.localStorage.setItem(
+        "amazing_blogsDetails",
+        JSON.stringify(state)
+      );
     },
   },
 });

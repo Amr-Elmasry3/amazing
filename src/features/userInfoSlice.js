@@ -3,16 +3,16 @@ import { createSlice } from "@reduxjs/toolkit";
 export const userInfoSlice = createSlice({
   name: "userInfo",
   initialState: {
-    accounts: window.localStorage.getItem("userInfo")
-      ? JSON.parse(window.localStorage.getItem("userInfo")).accounts
+    accounts: window.localStorage.getItem("amazing_userInfo")
+      ? JSON.parse(window.localStorage.getItem("amazing_userInfo")).accounts
       : [],
 
-    accountNow: window.localStorage.getItem("userInfo")
-      ? JSON.parse(window.localStorage.getItem("userInfo")).accountNow
+    accountNow: window.localStorage.getItem("amazing_userInfo")
+      ? JSON.parse(window.localStorage.getItem("amazing_userInfo")).accountNow
       : {},
 
-    isLogin: window.localStorage.getItem("userInfo")
-      ? JSON.parse(window.localStorage.getItem("userInfo")).isLogin
+    isLogin: window.localStorage.getItem("amazing_userInfo")
+      ? JSON.parse(window.localStorage.getItem("amazing_userInfo")).isLogin
       : false,
   },
   reducers: {
@@ -30,7 +30,7 @@ export const userInfoSlice = createSlice({
     },
 
     setInStorage: (state) => {
-      window.localStorage.setItem("userInfo", JSON.stringify(state));
+      window.localStorage.setItem("amazing_userInfo", JSON.stringify(state));
     },
 
     handleLogout: (state) => {
