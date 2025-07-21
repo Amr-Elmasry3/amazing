@@ -23,6 +23,10 @@ export default function Login() {
   const accounts = useSelector((choose) => {
     return choose.userInfo.accounts;
   });
+  const pageName = useSelector((choose) => {
+    return choose.navigation.pageName;
+  });
+
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -50,7 +54,11 @@ export default function Login() {
           dispatch(handleLogin());
           dispatch(setAccountNow(x));
           dispatch(setInStorage());
-          navigate(-1);
+
+          console.log(pageName);
+
+          navigate(`/${pageName}`);
+
           break;
         }
         // Second Possibility

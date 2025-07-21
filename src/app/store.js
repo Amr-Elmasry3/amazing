@@ -10,6 +10,7 @@ import compareSlice from "../features/compareSlice";
 import cartSlice from "../features/cartSlice";
 import searchSlice from "../features/searchSlice";
 import ourStoreSlice from "../features/ourStoreSlice";
+import navigationSlice from "../features/navigationSlice";
 
 export default configureStore({
   reducer: {
@@ -24,6 +25,7 @@ export default configureStore({
     cart: cartSlice,
     search: searchSlice,
     ourStore: ourStoreSlice,
+    navigation: navigationSlice,
   },
   devTools: true,
 });

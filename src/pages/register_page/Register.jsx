@@ -29,7 +29,6 @@ export default function Register() {
   });
 
   const navigate = useNavigate();
-
   const dispatch = useDispatch();
 
   const validateEmail = useMemo(() => {

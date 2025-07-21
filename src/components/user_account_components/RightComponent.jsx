@@ -14,6 +14,9 @@ import { useSelector, useDispatch } from "react-redux";
 // Import User Info Slice Reducers
 import { handleLogout, setInStorage } from "../../features/userInfoSlice";
 
+// Import Naviagation Slice Reducers
+import { setPageName, setPageInStorage } from "../../features/navigationSlice";
+
 export default function RightComponent({ category }) {
   const userInfo = useSelector((choose) => {
     return choose.userInfo.accountNow;
@@ -24,10 +27,12 @@ export default function RightComponent({ category }) {
 
   useEffect(() => {
     if (category === "Logout") {
-      console.log("logout");
       dispatch(handleLogout());
 
       dispatch(setInStorage());
+
+      dispatch(setPageName("/"));
+      dispatch(setPageInStorage());
 
       navigate("/login");
     }
@@ -44,7 +49,7 @@ export default function RightComponent({ category }) {
       ) : category === "Account Details" ? (
         <AccountDetails />
       ) : (
-        <span>Category Is Not Found</span>
+        ""
       )}
     </div>
   );
