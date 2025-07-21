@@ -10,14 +10,18 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 // Import Redux Hooks
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 // Import  Navigation Slice Reducers
 import { setPageName, setPageInStorage } from "../../features/navigationSlice";
 
-export default function UserLinks({ isLogin, handleMenu }) {
+export default function UserLinks({ handleMenu }) {
   const location = useLocation();
   const dispatch = useDispatch();
+
+  const isLogin = useSelector((choose) => {
+    return choose.userInfo.isLogin;
+  });
 
   return (
     <div className="user-links flex flex-col md:flex-row items-start md:center gap-4">

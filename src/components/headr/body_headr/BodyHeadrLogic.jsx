@@ -11,10 +11,6 @@ import { handleMenuToggle } from "../../../features/menuSlice";
 import { handleCartToggle } from "../../../features/cartSidebarSlice";
 
 export default function BodyHeadrLogic() {
-  const isLogin = useSelector((choose) => {
-    return choose.userInfo.isLogin;
-  });
-
   const cartInfo = useSelector((choose) => {
     return choose.cart;
   });
@@ -34,7 +30,6 @@ export default function BodyHeadrLogic() {
       <BodyHeadrUi
         handleMenu={handleMenu}
         handleCartSidebar={handleCartSidebar}
-        isLogin={isLogin}
         countOfCartPro={cartInfo.count}
         subTotalOfCartPro={cartInfo.subTotal}
       />

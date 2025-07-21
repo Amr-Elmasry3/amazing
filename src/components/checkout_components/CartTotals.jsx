@@ -28,7 +28,7 @@ export default function CartTotals({ cartInfo }) {
           </span>
         </div>
 
-        <div className="cart-totals-body h-[270px] overflow-y-scroll border-y border-y-solid border-y-border-one">
+        <div className="cart-totals-body max-h-[270px] overflow-y-scroll border-y border-y-solid border-y-border-one">
           {cartInfo.products.map((item, index) => {
             return (
               <div

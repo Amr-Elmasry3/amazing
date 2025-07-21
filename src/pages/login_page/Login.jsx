@@ -55,8 +55,6 @@ export default function Login() {
           dispatch(setAccountNow(x));
           dispatch(setInStorage());
 
-          console.log(pageName);
-
           navigate(`/${pageName}`);
 
           break;

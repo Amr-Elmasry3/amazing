@@ -15,7 +15,6 @@ import SearchBoxLogic from "../../search-box/SearchBoxLogic";
 export default function BodyHeadr({
   handleMenu,
   handleCartSidebar,
-  isLogin,
   countOfCartPro,
   subTotalOfCartPro,
 }) {
@@ -34,7 +33,7 @@ export default function BodyHeadr({
         <SearchBoxLogic />
 
         <div className="flex items-center gap-4">
-          <UserLinks isLogin={isLogin} />
+          <UserLinks />
 
           <div className="menu-icon flex md:hidden flex-1 justify-end cursor-pointer">
             <CgMenuRightAlt

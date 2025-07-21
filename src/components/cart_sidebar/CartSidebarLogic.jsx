@@ -69,7 +69,7 @@ export default function CartSidebarLogic() {
         subTotalOfCartPro={cartInfo.subTotal}
         removeProduct={removeProduct}
         isLogin={isLogin}
-        handleMyModle={handleMyModel}
+        handleMyModel={handleMyModel}
       />
     </>
   );

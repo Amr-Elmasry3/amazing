@@ -1,11 +1,17 @@
 // Import Components
 import Button from "../button/Button";
 
+// Import Hooks
+import { useLocation } from "react-router-dom";
+
 // Import Redux Hooks
 import { useSelector, useDispatch } from "react-redux";
 
 // Import Model Slice Reducers
 import { handleModel } from "../../features/modelSlice";
+
+// Import  Navigation Slice Reducers
+import { setPageName, setPageInStorage } from "../../features/navigationSlice";
 
 export default function MyModel() {
   const isOpen = useSelector((choose) => {
@@ -16,7 +22,12 @@ export default function MyModel() {
     return choose.model.message;
   });
 
+  const isLogin = useSelector((choose) => {
+    return choose.userInfo.isLogin;
+  });
+
   const dispatch = useDispatch();
+  const location = useLocation();
 
   function handleModelState() {
     dispatch(handleModel());
@@ -37,7 +48,24 @@ export default function MyModel() {
         </h1>
 
         <div className="btns-box flex justify-end gap-2">
-          <Button link="/login" btnTitle="Login" func={handleModelState} />
+          <Button
+            link="/login"
+            btnTitle="Login"
+            func={() => {
+              handleModelState();
+
+              if (
+                !isLogin &&
+                location.pathname !== "/login" &&
+                location.pathname !== "/register"
+              ) {
+                const pageName = location.pathname.slice(1);
+
+                dispatch(setPageName(pageName));
+                dispatch(setPageInStorage());
+              }
+            }}
+          />
 
           <Button btnTitle="Cancel" func={handleModelState} />
         </div>

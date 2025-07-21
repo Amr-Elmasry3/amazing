@@ -7,7 +7,7 @@ export default function CartButtons({ isLogin, handleMyModel }) {
       className="cart-btns flex flex-wrap gap-4 justify-between"
       style={{ margin: "30px 0 0" }}
     >
-      <Button link="" btnTitle="Continue Shopping" />
+      <Button link="/our-store" btnTitle="Continue Shopping" />
 
       <Button
         link={isLogin ? "/checkout" : null}
